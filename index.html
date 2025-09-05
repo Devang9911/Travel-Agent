@@ -128,59 +128,6 @@
             }
         }
         closeMenu();
-
-        async function fetchPackageCards() {
-            let response = await fetch('https://68ba99e984055bce63ef944d.mockapi.io/packageCards');
-            return response.json();
-        }
-
-        async function postContactQuery(name, email, subject, message) {
-            let response = await fetch('https://68ba99e984055bce63ef944d.mockapi.io/Contact-Questions', {
-                method: 'POST',
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    name: name,
-                    email: email,
-                    subject: subject,
-                    message: message
-                })
-            })
-            return response.json();
-        }
-
-        let packageContainer = document.getElementById('packageContainer');
-        async function displayPackageCards() {
-            let packageCards = await fetchPackageCards();
-            // console.log(packageCards);
-
-            for (let i = 0; i < packageCards.length; i++) {
-                packageContainer.innerHTML += `                <article class="package-card">
-                    <img src="${packageCards[i].image}" alt="Scenic view of ${packageCards[i].title}">
-                    <div class="content">
-                        <h3>${packageCards[i].title}</h3>
-                        <p>${packageCards[i].description}</p>
-                        <button>Visit</button>
-                    </div>
-                </article>`
-            }
-        }
-        displayPackageCards();
-
-        // contact form submission
-        let contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener("submit", async (e) => {
-            e.preventDefault();
-
-            let name = document.getElementById('name').value;
-            let email = document.getElementById('email').value;
-            let subject = document.getElementById('subject').value;
-            let message = document.getElementById('message').value;
-
-            let response = await postContactQuery(name, email, subject, message);
-            console.log(response);
-        })
     </script>
 </body>
 
