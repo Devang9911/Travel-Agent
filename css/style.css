@@ -424,6 +424,10 @@ footer {
         letter-spacing: 10px;
     }
 
+    .package-container{
+        flex-direction: column;
+    }
+
     .contact-container {
         margin-top: 50px;
         padding: 15px;
