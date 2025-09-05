@@ -1,0 +1,465 @@
+/* ========== RESET ========== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Michroma", sans-serif;
+    overflow-x: hidden;
+    /* prevent horizontal scroll */
+    /* fallback background */
+}
+
+/* ========== PAGE ONE (Hero) ========== */
+.page-one {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://webredox.net/demo/wp/travol/wp-content/uploads/2022/07/1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* ===== Navigation ===== */
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.719);
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navigation h1 {
+    font-size: 50px;
+    color: white;
+}
+
+.navigation nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.navigation nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.navigation nav ul li:hover {
+    transform: scale(0.9);
+}
+
+.navigation nav li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation nav li img {
+    width: 20px;
+}
+
+/* ===== Hero Content ===== */
+.page-one-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.089);
+    text-align: center;
+}
+
+.page-one-content p {
+    font-size: 15px;
+    letter-spacing: 14px;
+    color: white;
+    text-shadow: 5px 5px 15px rgb(0, 0, 0);
+}
+
+.page-one-content h1 {
+    color: white;
+    font-size: 50px;
+    text-shadow: 0px 0px 7px rgb(0, 0, 0);
+}
+
+.page-one-content span {
+    color: #ffcc00;
+}
+
+/* ========== PAGE TWO (Packages) ========== */
+
+.page-two {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* overflow: hidden; */
+}
+.page-two-content {
+    z-index: 1;
+    padding-top: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-two-content h1 {
+    text-transform: uppercase;
+    font-family: monospace;
+    color: black;
+    font-size: 50px;
+    letter-spacing:     25px;
+}
+
+/* ===== Packages Grid ===== */
+.package-container {
+    width: 80vw;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.package-card {
+    position: relative;
+    width: 260px;
+    height: 340px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.692);
+}
+
+.package-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.package-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Overlay panel */
+.package-card .content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.548);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.package-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.package-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+    color: #f1f1f1;
+}
+
+/* Button */
+.package-card button {
+    align-self: flex-start;
+    margin-top: 0.3rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.6rem;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.package-card button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ff6a3d, #fd9d52);
+}
+
+
+
+
+
+/* ========== FOOTER ========== */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.contact-section {
+    /* height: 100vh; */
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(214, 212, 212);
+    padding: 40px;
+}
+
+.contact-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    width: 100%;
+}
+
+.contact-info {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-info h2 {
+    z-index: 1;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.info-item span {
+    font-weight: bold;
+    color: #4facfe;
+}
+
+.contact-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contact-form button {
+    padding: 14px;
+    border: none;
+    background: #4facfe;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #00c6ff;
+}
+
+.divider {
+    line-height: 0;
+}
+
+/* ===== Responsive (for smaller screens) ===== */
+@media screen and (max-width: 982px) {
+
+    /* Hide scrollbar but allow scrolling */
+    ::-webkit-scrollbar {
+        display: none;
+        /* For Chrome, Safari, Edge */
+    }
+
+    * {
+        -ms-overflow-style: none;
+        /* For Internet Explorer & Edge */
+        scrollbar-width: none;
+        /* For Firefox */
+    }
+
+    .navigation nav ul {
+        display: none;
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.473);
+        padding: 10px 0;
+        z-index: 1000;
+        transition: all 0.5s ease;
+    }
+
+    .navigation nav ul.open {
+        display: flex;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger svg {
+        color: white;
+    }
+
+    .navigation h1 {
+        font-size: 30px;
+    }
+
+    .page-one-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page-one-content p {
+        padding: 20px;
+        font-size: 15px;
+        letter-spacing: 5px;
+    }
+
+    .page-one-content h1 {
+        font-size: 30px;
+        text-shadow: 0px 0px 5px rgb(0, 0, 0);
+    }
+
+    .page-two{
+        align-items: flex-start;
+    }
+
+    .page-two-content {
+        margin-top: 100px;
+        padding-top: 15px;
+    }
+
+    .page-two-content h1 {
+        font-size: 30px;
+        letter-spacing: 10px;
+    }
+
+    .contact-container {
+        margin-top: 50px;
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    .contact-info {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-info h2 {
+        font-size: 30px;
+    }
+
+    .contact-info p {
+        font-size: 18px;
+        color: #555;
+        text-align: justify;
+    }
+
+    .info-item {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+
+}

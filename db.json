@@ -1,0 +1,37 @@
+{
+  "packageCards": [
+    {
+      "id": "1",
+      "image": "img/swiss1.jpg",
+      "title": "Switzerland",
+      "description": "Switzerland is a country where the mountains whisper and the lakes sing."
+    },
+    {
+      "id": "2",
+      "image": "img/spain.jpg",
+      "title": "Spain",
+      "description": "Spain is a country that offers a rich tapestry of history, culture, and stunning landscapes."
+    },
+    {
+      "id": "3",
+      "image": "img/italy.jpg",
+      "title": "Italy",
+      "description": "Italy is a country known for its art, history, and stunning landscapes."
+    },
+    {
+      "id": "4",
+      "image": "img/zurich.jpg",
+      "title": "Zurich",
+      "description": "Zurich is a city in Switzerland that is known for its beautiful lakes and vibrant cultural scene."
+    }
+  ],
+  "Contact-Questions": [
+    {
+      "id": "b948",
+      "name": "Devang Randeria",
+      "email": "devangranderia9@gmail.com",
+      "subject": "Booking",
+      "message": "Planning a trip"
+    }
+  ]
+}
