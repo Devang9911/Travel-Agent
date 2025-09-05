@@ -32,20 +32,6 @@
       "email": "devangranderia9@gmail.com",
       "subject": "Booking",
       "message": "Planning a trip"
-    },
-    {
-      "id": "c64d",
-      "name": "Dhruv",
-      "email": "dhruv@gmail.com",
-      "subject": "Booking",
-      "message": "Trip"
-    },
-    {
-      "id": "1ec1",
-      "name": "Aayush",
-      "email": "ayush@gmail.com",
-      "subject": "Booking",
-      "message": "Trip"
     }
   ]
 }

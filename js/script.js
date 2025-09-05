@@ -48,4 +48,6 @@ contactForm.addEventListener("submit", async (e)=>{
 
     let response = await postContactQuery(name, email, subject, message);
     console.log(response);
+    window.location.href = "index.html#home"
+    alert("Thank you for contacting us , We will reach you out soon :)")
 })
