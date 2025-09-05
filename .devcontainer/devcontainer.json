@@ -1,0 +1,6 @@
+{
+    "name": "My Codespace",
+    "extensions": [
+        "ritwickdey.liveserver"
+    ]
+}
